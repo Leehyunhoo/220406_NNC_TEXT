@@ -31,3 +31,4 @@ class Config():
     metric_score = ['f1-score', 'acc-score']
     drop_rate = 0.3
     feature_dim = 768
+    max_length=0

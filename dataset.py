@@ -16,7 +16,6 @@ class Dataset(data.Dataset):
     def __getitem__(self, index):
         ann_file = self.ann_files.loc[index]
         text = ann_file['text']
-        print(text)
         input_ids, attention_masks = self.tokenize([text])
         inputs = (torch.as_tensor(input_ids, dtype=torch.long), torch.as_tensor(attention_masks, dtype=torch.long))
 

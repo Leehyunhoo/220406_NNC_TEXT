@@ -35,7 +35,7 @@ class Dataset(data.Dataset):
             encoded_dict = tokenizer.encode_plus(
                 seq,  # Sentence to encode.
                 add_special_tokens=True,  # Add '[CLS]' and '[SEP]'
-                max_length=32,  # Pad & truncate all sentences.
+                max_length=self.args.max_length,  # Pad & truncate all sentences.
                 truncation=True,
                 padding='max_length',
                 return_attention_mask=True,  # Construct attn. masks.

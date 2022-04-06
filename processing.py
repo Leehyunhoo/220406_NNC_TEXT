@@ -6,7 +6,7 @@ from sklearn.model_selection import StratifiedKFold
 
 def PreProcessing(args):
   files=[]
-  ann_files1 = pd.read_csv('/content/drive/MyDrive/cigro/BETA/models/model1/double.csv',encoding='cp949')
+  ann_files1 = pd.read_csv('double.csv',encoding='cp949')
   for str in ann_files1["fullText"]:
     str='/'.join(str.split('\n'))
     files.append(str)
@@ -29,5 +29,5 @@ def PreProcessing(args):
 
   ann_files = pd.DataFrame(np.array([files, label]).transpose())
   ann_files.columns = ['text', 'label']
-  ann_files.to_csv("double_data.csv")
+  #ann_files.to_csv("double_data.csv")
   return train_ann_files, val_ann_files

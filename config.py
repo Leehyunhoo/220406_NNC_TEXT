@@ -1,6 +1,6 @@
 import pandas as pd
 
-ann_files = pd.read_csv('data.csv')
+ann_files = pd.read_csv('double_data.csv')
 
 class Config():
     weight_decay = 0
